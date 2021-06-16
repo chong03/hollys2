@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+
+  <!-- BX슬라이더 플러그인 시작-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider();
+    });
+  </script>
+  <!-- BX슬라이더 플러그인 끝-->
+
+  <title>HOLLYS</title>
+  <style>
+    /* CSS Reset */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+      font-family:'Roboto','Noto Sans KR',sans-serif;
+    }
+    ul,ol,li{
+      list-style:none;
+    }
+    a{
+      color:#000000;
+      text-decoration:none;
+    }
+    img{
+      width:100%;
+      vertical-align:top;
+    }
+    .clearfix::after{
+      content:'';
+      display:block;
+      clear:both;
+    }
+
+
+
+    /* 공통스타일 */
+    
+    .container{
+      width:940px;
+      margin:0 auto;
+    }
+
+
+
+    /* 헤더 스타일 */
+    header{
+      border-bottom:2px solid #ff0000;
+      padding:14px 0 18px 0;
+      background-color:#ffffff;
+    }
+    .small-nav01,.ci,.small-nav02{
+      float:left;
+      width:300px;
+      margin-right:20px;
+    }
+    .small-nav01>li{
+      float:left;
+      margin-right:37px;
+    }
+    .small-nav01>li:last-child{
+      margin-right:0;
+    }
+    .small-nav01 .icon-box,.small-nav01 h4{
+      display:inline-block;
+    }
+    .small-nav01 li:nth-child(1) .icon-box{
+      width:13px;
+    }
+    .small-nav01 li:nth-child(2) .icon-box{
+      width:23px;
+    }
+    .small-nav01 li:nth-child(3) .icon-box{
+      width:20px;
+    }
+    .small-nav01 .icon-box{
+      margin-right:1px;
+    }
+    .small-nav01 h4{
+      font-weight:500;
+      font-size:14px;
+      color:#333333;
+      vertical-align:top;
+      margin-top:-3px;
+    }
+    .small-nav01 li:first-child h4{
+      color:#ff0000;
+    }
+    .ci .icon-box{
+      width:54px;
+      margin:0 auto;
+    }
+    .ci svg{
+      fill:#ff0000;
+    }
+    .ci h1{
+      margin-top:-2px;
+      font-weight:700;
+      font-size:24px;
+      color:#333333;
+      text-align:center;
+    }
+    .small-nav02{
+      margin-right:0;
+    }
+    .small-nav02 li{
+      float:left;
+      margin-right:21px;
+    }
+    .small-nav02 li:last-child{
+      margin-right:0;
+    }
+    .small-nav02 li a{
+      font-weight:500;
+      font-size:11px;
+      color:#666666;
+    }
+    .nav{
+      margin-top:13px;
+      padding:0 80px;
+    }
+    .nav li{
+      float:left;
+      margin-right:55px;
+    }
+    .nav li:last-child{
+      margin-right:0;
+    }
+    .nav li a{
+      font-weight:700;
+      font-size:20px;
+      color:#333333;
+    }
+    .nav li:hover a{
+      color:#ff0000;
+    }
+
+
+    /* 매인 배너 스타일 */
+    .main-banner{
+      margin-bottom:30px;
+    }
+    .main-banner>.container{
+      width:100%;
+    }
+    .bx-wrapper{
+      border:none;
+    }
+    .bx-controls-direction{
+      display:none;
+    }
+    .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+      bottom: 21px;
+    }
+    .bx-wrapper .bx-pager.bx-default-pager a{
+      width:20px;
+      height:20px;
+      margin:0 10px;
+      border-radius:10px;
+      background-color:#cccccc;
+    }
+    .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus{
+      background-color:#ff0000;
+    }
+    
+
+    /* 섹션01 스타일 */
+    .sec01{
+      margin-bottom:40px;
+    }
+    .sec01 .franchise,
+    .sec01 .hollys-mall,
+    .sec01 .store{
+      float:left;
+      margin-right:20px;
+    }
+    .sec01 .store{
+      margin-right:0;
+    }
+    .sec01 .franchise,
+    .sec01 .store{
+      position:relative;
+    }
+    .sec01 .over-text{
+      position:absolute;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      padding:34px 0 0 17px;
+    }
+    .sec01 .hollys-mall .over-text{
+      position:static;
+    }
+    .sec01 .icon-box,
+    .sec01 .tit-box{
+      float:left;
+    }
+    .sec01 .icon-box{
+      width:15px;
+      margin-right:12px;
+    }
+    .sec01 .tit-box h2{
+      font-weight:700;
+      font-size:24px;
+      color:black;
+      vertical-align:top;
+      margin-top:-6px;
+    }
+    .sec01 .hollys-mall h2{
+      color:#ff0000;
+    }
+    .sec01 h3{
+      font-weight:300;
+      font-size:14px;
+      color:#333333;
+      margin-top:12px;
+    }
+    .mall-items{
+      margin-top:50px;
+    }
+    .mall-items li{
+      float:left;
+      width:140px;
+      margin-right:20px;
+    }
+    .mall-items li:last-child{
+      margin-top:38px;
+      margin-right:0;
+    }
+    .mall-items li:nth-child(1) .img-box{
+      width:94px;
+      margin:0 auto;
+    }
+    .mall-items li:nth-child(2) .img-box{
+      width:50px;
+      margin:0 auto;
+    }
+    .mall-items li:nth-child(3) .img-box{
+      width:76px;
+      margin:0 auto;
+    }
+    .mall-items h3{
+      font-weight:300;
+      font-size:12px;
+      color:#333333;
+      text-align:center;
+    }
+
+
+
+    /* 섹션02 스타일 */
+    .sec02{
+      margin-bottom:40px;
+    }
+    .sec02 .membership{
+      float:left;
+      position:relative;
+    }
+
+    .sec02 .card{
+      float:right;
+      position:relative;
+    }
+    .sec02 .over-text{
+      position:absolute;
+      left:17px;
+      top:29px;
+    }
+    .sec02 h2{
+      font-weight:500;
+      font-size:14px;
+      color:#ff0000;
+    }
+    .sec02 h3{
+      margin-top:-3px;
+      margin-bottom:5px;
+      font-weight:400;
+      font-size:32px;
+      color:#ffffff;
+    }
+    .sec02 p{
+      font-weight:400;
+      font-size:14px;
+      line-height:22px;
+      color:#ffffff;
+    }
+
+
+
+    /* 섹션03 스타일 */
+    .sec03{
+      margin-bottom:40px;
+    }
+    .sec03 .container{
+      border-bottom:2px solid #ff0000;
+      padding-bottom:83px;
+    }
+    .sec03 .container>div{
+      float:left;
+      width:220px;
+      margin-right:20px;
+    }
+    .sec03 .container>div:last-child{
+      margin-right:0;
+    }
+    .sec03-tit{
+      margin-bottom:5px;
+    }
+    .sec03-tit .icon-box,
+    .sec03-tit h2{
+      float:left;
+    }
+    .sec03-tit .icon-box{
+      width:14px;
+      margin-right:6px;
+    }
+    .sec03-tit h2{
+      margin-top:-2px;
+      font-weight:500;
+      font-size:16px;
+      color:#666666;
+    }
+    .sec03 p,.sec03 a,.sec03 h3{
+      font-weight:300;
+      font-size:14px;
+      line-height:21px;
+      color:#666666;
+    }
+    .sec03-text{
+      margin-bottom:6px;
+    }
+    .news li{
+      margin-bottom:1px;
+    }
+    .news li p:first-child{
+      float:left;
+    }
+    .news li p:last-child{
+      float:right;
+    }
+    .faq-gna ul{
+      padding:30px 14px 0;
+    }
+    .faq-gna li{
+      float:left;
+      width:52px;
+    }
+    .faq-gna li:nth-child(2){
+      width:88px;
+    }
+    .faq-gna .icon-box{
+      width:42px;
+      margin:0 auto 10px;
+    }
+    .faq-gna h3{
+      text-align:center;
+    }
+
+
+    /* 할리스 라이브 스타일 */
+    .hollys-live{
+      height:245px;
+      margin-bottom:100px;
+    }
+    .hollys-live h2,.hollys-live ul{
+      float:left;
+    }
+    .hollys-live h2{
+      margin-right:33px;
+      font-weight:700;
+      font-size:36px;
+      color:#333333;
+    }
+    .hollys-live li{
+      float:left;
+      width:34px;
+      margin-right:17px;
+    }
+    .hollys-live li:nth-child(2) img{
+      width:auto;
+      height:34px;
+    }
+
+    /* 푸터스타일 */
+    footer{
+      background-color:#ff0000;
+      padding:13px 0;
+    }
+    footer *{
+      color:#ffffff;
+    }
+    footer ul{
+      margin-bottom:37px;
+    }
+    footer li{
+      float:left;
+    }
+    footer li::after{
+      content:'';
+      display:inline-block;
+      width:2px;
+      height:16px;
+      margin:5px 6px 0;
+      background-color:#ffffff;
+    }
+    footer li:last-child::after{
+      visibility:hidden;
+    }
+    footer li p{
+      display:inline-block;
+    }
+    footer li p,footer li strong{
+      font-weight:400;
+      font-size:14px;
+    }
+    footer li strong{
+      font-weight:900;
+    }
+    address{
+      font-weight:400;
+      font-size:12px;
+      line-height:24px;
+      font-style:normal;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 헤더섹션 -->
+    <header>
+      <div class="container">
+        <div class="header-top clearfix">
+          <ul class="small-nav01 clearfix">
+            <li>
+              <a href="#">
+                <div class="icon-box">
+                  <img src="./images/icon-user.svg" alt="가맹문의">
+                </div>
+                <h4>가맹문의</h4>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="icon-box">
+                  <img src="./images/icon-academy.svg" alt="아카데미">
+                </div>
+                <h4>아카데미</h4>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="icon-box">
+                  <img src="./images/icon-company.svg" alt="기업특판">
+                </div>
+                <h4>기업특판</h4>
+              </a>
+            </li>
+          </ul>
+          <div class="ci">
+            <a href="index.html">
+              <div class="icon-box">
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                <g>
+                  <polygon points="7.15,97.96 24.66,97.96 24.66,49.01 3.03,34.59 	"/>
+                  <polygon points="92.67,97.96 75.16,97.96 75.16,49.01 96.79,34.59 	"/>
+                  <polygon points="31.36,97.96 68.97,97.96 68.97,47.98 50.17,36.65 31.36,47.47 	"/>
+                  <polygon points="50.17,24.39 58.92,28.99 57.25,19.24 64.34,12.33 54.55,10.91 50.17,2.04 45.79,10.91 36,12.33 43.08,19.24 
+                    41.41,28.99 	"/>
+                  <circle cx="5.92" cy="23.29" r="5.7"/>
+                  <circle cx="94.08" cy="23.29" r="5.7"/>
+                </g>
+                </svg>
+              </div>
+              <h1>HOLLYS</h1>
+            </a>
+          </div>
+          <ul class="small-nav02 clearfix">
+            <li>
+              <a href="#">멤버십로그인</a>
+            </li>
+            <li>
+              <a href="#">멤버십 가입</a>
+            </li>
+            <li>
+              <a href="#">고객센터</a>
+            </li>
+            <li>
+              <a href="#">English</a>
+            </li>
+            <li>
+              <a href="#">中文</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav">
+          <ul class="clearfix">
+            <li>
+              <a href="#">Menu</a>
+            </li>
+            <li>
+              <a href="#">Hollys Mall</a>
+            </li>
+            <li>
+              <a href="#">Membership</a>
+            </li>
+            <li>
+              <a href="#">Hollys News</a>
+            </li>
+            <li>
+              <a href="#">Store</a>
+            </li>
+            <li>
+              <a href="#">Hollys Is</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- 매인배너 섹션 -->
+    <section class="main-banner">
+      <div class="container">
+        <div class="slider">
+          <div>
+            <img src="./images/main-banner01.jpg" alt="banner01">
+          </div>
+          <div>
+            <img src="./images/main-banner02.jpg" alt="banner02">
+          </div>
+          <div>
+            <img src="./images/main-banner03.jpg" alt="banner03">
+          </div>
+          <div>
+            <img src="./images/main-banner04.jpg" alt="banner04">
+          </div>
+          <div>
+            <img src="./images/main-banner05.jpg" alt="banner05">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션01 -->
+    <section class="sec01">
+      <div class="container clearfix">
+        <div class="franchise">
+          <div class="img-box">
+            <img src="./images/franchise.jpg" alt="플랜차이즈">
+          </div>
+          <div class="over-text">
+            <div class="over-text-tit clearfix">
+              <div class="icon-box">
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg version="1.1" id="Layer_1" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px" y="0px" viewBox="0 0 448 512" style="enable-background:new 0 0 448 512;" xml:space="preserve">
+                <style type="text/css">
+                  .st0{fill:#000000;}
+                </style>
+                <path class="st0" d="M224,256c70.7,0,128-57.3,128-128S294.7,0,224,0S96,57.3,96,128S153.3,256,224,256z M319.8,288.6L272,480
+                  l-32-136l32-56h-96l32,56l-32,136l-47.8-191.4C56.9,292,0,350.3,0,422.4V464c0,26.5,21.5,48,48,48h352c26.5,0,48-21.5,48-48v-41.6
+                  C448,350.3,391.1,292,319.8,288.6L319.8,288.6z"/>
+                </svg>
+
+                <!-- <img src="./images/icon-user.svg" alt="가맹문의"> -->
+              </div>
+              <div class="tit-box">
+                <h2>Franchise</h2>
+              </div>
+            </div>
+            <div class="over-text-content">
+              <h3>가맹문의</h3>
+            </div>
+          </div>
+        </div>
+        <div class="hollys-mall">
+          <div class="over-text">
+            <div class="over-text-tit clearfix">
+              <div class="icon-box">
+                <img src="./images/icon-user.svg" alt="할리스몰">
+              </div>
+              <div class="tit-box">
+                <h2>Hollys Mall</h2>
+              </div>
+            </div>
+            <div class="over-text-content">
+              <h3>할리스의 다양한 상품들을 온라인에서도 만나보세요.</h3>
+            </div>
+          </div>
+          <ul class="mall-items clearfix">
+            <li>
+              <a href="#">
+                <div class="img-box">
+                  <img src="./images/kiwi.png" alt="키위 스무디">
+                </div>
+                <h3>키위 스무디</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img-box">
+                  <img src="./images/strawberry.png" alt="딸기 스무디">
+                </div>
+                <h3>딸기 스무디</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img-box">
+                  <img src="./images/strawberry-pie.png" alt="딸기 파이">
+                </div>
+                <h3>딸기 파이</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="store">
+          <div class="img-box">
+            <img src="./images/store.jpg" alt="매장찾기">
+          </div>
+          <div class="over-text">
+            <div class="over-text-tit clearfix">
+              <div class="icon-box">
+                <img src="./images/icon-store.svg" alt="매장찾기">
+              </div>
+              <div class="tit-box">
+                <h2>Store</h2>
+              </div>
+            </div>
+            <div class="over-text-content">
+              <h3>
+                전국에 있는 할리스 매장을
+                <br>
+                찾아드립니다
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션02 -->
+    <section class="sec02">
+      <div class="container clearfix">
+        <div class="membership">
+          <div class="img-box">
+            <img src="./images/membership.jpg" alt="멤버십">
+          </div>
+          <div class="over-text">
+            <h2>Membership</h2>
+            <h3>할리스 멤버십</h3>
+            <p>
+              할리스 멤버십 ‘CROWN’으로
+              <br>
+              다양한 혜택을 즐겨보세요
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-box">
+            <img src="./images/card.jpg" alt="기프트 카드">
+          </div>
+          <div class="over-text">
+            <h2>Gift Card</h2>
+            <h3>할리스카드</h3>
+            <p>
+              할리스카드로 쉽고 간편하게
+              <br>
+              소중한 사람들에게 마음을 전하세요 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션03 -->
+    <section class="sec03">
+      <div class="container clearfix">
+        <div class="coffee-academy">
+          <div class="sec03-tit clearfix">
+            <div class="icon-box">
+              <img src="./images/icon-coffee-academy.svg" alt="커피아카데미">
+            </div>
+            <h2>Coffee Academy</h2>
+          </div>
+          <p class="sec03-text">
+            할리스 아카데미와 함께하는 즐거운 커피 여행
+          </p>
+          <p>
+            <a href="#">바로가기</a>
+          </p>
+        </div>
+        <div class="solution">
+          <div class="sec03-tit clearfix">
+            <div class="icon-box">
+              <img src="./images/icon-solution.svg" alt="솔루션">
+            </div>
+            <h2>Hollys B2B Solution</h2>
+          </div>
+          <p class="sec03-text">
+            할리스 F&B는 20년의 커피 노하우를 기반으로한하리스 B2B 솔루션을 소개합니다. 
+          </p>
+          <p>
+            <a href="#">바로가기</a>
+          </p>
+        </div>
+        <div class="news">
+          <div class="sec03-tit clearfix">
+            <div class="icon-box">
+              <img src="./images/icon-news.svg" alt="뉴스">
+            </div>
+            <h2>News</h2>
+          </div>
+          <ul>
+            <li class="clearfix">
+              <p>
+                <a href="#">
+                  SKT 제휴서비스 종료 안내
+                </a>
+              </p>
+              <p>
+                02-22
+              </p>
+            </li>
+            <li class="clearfix">
+              <p>
+                <a href="#">
+                  개인정보처리방침 변경 안내
+                </a>
+              </p>
+              <p>
+                10-06
+              </p>
+            </li>
+            <li class="clearfix">
+              <p>
+                <a href="#">
+                  중간배당 기준일 공고
+                </a>
+              </p>
+              <p>
+                10-14
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="faq-gna">
+          <ul class="clearfix">
+            <li>
+              <a href="#">
+                <div class="icon-box">
+                  <img src="./images/ci.svg" alt="창업안내">
+                </div>
+                <h3>창업안내</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="icon-box">
+                  <img src="./images/ci.svg" alt="아카데미강좌">
+                </div>
+                <h3>아카데미강좌</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="icon-box">
+                  <img src="./images/ci.svg" alt="고객문의">
+                </div>
+                <h3>고객문의</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 할리스 라이브 섹션 -->
+    <section class="hollys-live">
+      <div class="container clearfix">
+        <h2>Hollys Live</h2>
+        <ul class="clearfix">
+          <li>
+            <a href="#" class="icon-box">
+              <img src="./images/icon-facebook.svg" alt="패이스북">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="icon-box">
+              <img src="./images/icon-instagram.svg" alt="인스타그램">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="icon-box">
+              <img src="./images/icon-blog.svg" alt="블로그">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 푸터 섹션 -->
+    <footer>
+      <div class="container">
+        <ul class="clearfix">
+          <li>
+            <a href="#"><strong>개인정보처리방침</strong></a>
+          </li>
+          
+          <li>
+            <a href="#"><p>서비스이용약관</p></a>
+          </li>
+          
+          <li>
+            <a href="#"><p>멤버십이용약관</p></a>
+          </li>
+          
+          <li>
+            <a href="#"><p>고객문의</p></a>
+          </li>
+          
+          <li>
+            <a href="#"><p>고객설문</p></a>
+          </li>
+          
+          <li>
+            <a href="#"><p>사이트맵</p></a>
+          </li>
+          
+          <li>
+            <a href="#"><p>BI소개</p></a>
+          </li>
+        </ul>
+        <address>
+          법인명: (주) 케이지할리스에프앤비 대표자: 신유정 사업자등록번호 211-87-61044 통신판매업: 제2019-서울종로-0193호
+          <br>
+          주소 : 서울특별시 종로구 율곡로 88 삼환빌딩 8층 (운니동) 대표전화 : 02-2188-7100 (가맹문의 : 02-6350-7229)
+          <br>
+          COPYRIGHT (C) KG HOLLYS F&B. All Rights Reserved.
+        </address>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
